@@ -12,6 +12,7 @@
 		3137C4142A55727600746318 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4132A55727600746318 /* CustomLabel.swift */; };
 		3137C4162A55729D00746318 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4152A55729D00746318 /* CustomButton.swift */; };
 		3137C4182A5572BE00746318 /* CustomColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4172A5572BE00746318 /* CustomColorButton.swift */; };
+		3137C41A2A55833400746318 /* UIColorExtexnsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4192A55833400746318 /* UIColorExtexnsion.swift */; };
 		31C1F30B2A548D8D00E42C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */; };
 		31C1F30D2A548D8D00E42C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */; };
 		31C1F30F2A548D8D00E42C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30E2A548D8D00E42C4A /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		3137C4132A55727600746318 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		3137C4152A55729D00746318 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		3137C4172A5572BE00746318 /* CustomColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorButton.swift; sourceTree = "<group>"; };
+		3137C4192A55833400746318 /* UIColorExtexnsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtexnsion.swift; sourceTree = "<group>"; };
 		31C1F3072A548D8D00E42C4A /* WhatsDog_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsDog_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		31C1F3BA2A556F9500E42C4A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3137C4192A55833400746318 /* UIColorExtexnsion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				3137C4142A55727600746318 /* CustomLabel.swift in Sources */,
 				3137C4102A55721C00746318 /* CustomUIView.swift in Sources */,
 				31C1F30B2A548D8D00E42C4A /* AppDelegate.swift in Sources */,
+				3137C41A2A55833400746318 /* UIColorExtexnsion.swift in Sources */,
 				3137C4162A55729D00746318 /* CustomButton.swift in Sources */,
 				31C1F30D2A548D8D00E42C4A /* SceneDelegate.swift in Sources */,
 				3137C4122A55724D00746318 /* CustomGradientView.swift in Sources */,
