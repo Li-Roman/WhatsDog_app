@@ -10,7 +10,7 @@ import UIKit
 class FriendsViewController: UIViewController {
     
     private var friends         = Friends
-    private var filteredFrinds  = [Friend]()
+    private var filteredFriends  = [Friend]()
 
     private var tableView: UITableView = .init(frame: .zero, style: .grouped)
     private var closeButton            = UIBarButtonItem()
@@ -38,7 +38,7 @@ class FriendsViewController: UIViewController {
     }
 }
 
-
+// MARK: - Setup Views
 extension FriendsViewController {
     
     private func setupViews() {
@@ -113,15 +113,34 @@ extension FriendsViewController {
     }
 }
 
+// MARK: - Private Methods
+extension FriendsViewController {
+    
+    private func isNowFiltering() -> [Friend] {
+        switch isFiltering {
+        case true:
+            return filteredFriends
+        case false:
+            return friends
+        }
+    }
+    
+}
+
 // MARK: - TableView Delegate
 extension FriendsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ProfileDetailViewController()
-        vc.setupInfoFor(name: friends[indexPath.row].name,
-                        avatar: friends[indexPath.row].avatar,
-                        resultDescripton: friends[indexPath.row].resultBreed,
-                        resultImage: friends[indexPath.row].resultImage)
+        
+        let rightFrinds = isNowFiltering()
+        
+        vc.setupInfoFor(name: rightFrinds[indexPath.row].name,
+                        avatar: rightFrinds[indexPath.row].avatar,
+                        resultDescripton: rightFrinds[indexPath.row].resultBreed,
+                        resultImage: rightFrinds[indexPath.row].resultImage
+                        )
+        
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -136,7 +155,7 @@ extension FriendsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering {
-            return filteredFrinds.count
+            return filteredFriends.count
         }
           return friends.count
     }
@@ -147,7 +166,7 @@ extension FriendsViewController: UITableViewDataSource {
         var friend: Friend
         
         if isFiltering {
-            friend = filteredFrinds[indexPath.row]
+            friend = filteredFriends[indexPath.row]
         } else {
             friend = friends[indexPath.row]
         }
@@ -167,7 +186,7 @@ extension FriendsViewController: UISearchResultsUpdating {
     
     private func filterContentForSearchText(_ searchText: String) {
     
-        filteredFrinds = friends.filter({ (friend: Friend) -> Bool in
+        filteredFriends = friends.filter({ (friend: Friend) -> Bool in
             return friend.name.lowercased().contains(searchText.lowercased())
         })
         
