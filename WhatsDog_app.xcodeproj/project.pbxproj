@@ -10,7 +10,6 @@
 		31C1F30B2A548D8D00E42C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */; };
 		31C1F30D2A548D8D00E42C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */; };
 		31C1F30F2A548D8D00E42C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30E2A548D8D00E42C4A /* ViewController.swift */; };
-		31C1F3122A548D8D00E42C4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C1F3102A548D8D00E42C4A /* Main.storyboard */; };
 		31C1F3142A548D8E00E42C4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C1F3132A548D8E00E42C4A /* Assets.xcassets */; };
 		31C1F3172A548D8E00E42C4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C1F3152A548D8E00E42C4A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		31C1F30E2A548D8D00E42C4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		31C1F3112A548D8D00E42C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31C1F3132A548D8E00E42C4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31C1F3162A548D8E00E42C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31C1F3182A548D8E00E42C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,78 @@
 		31C1F3092A548D8D00E42C4A /* WhatsDog_app */ = {
 			isa = PBXGroup;
 			children = (
+				31C1F3B62A556F6A00E42C4A /* QuestionProcess */,
+				31C1F3B72A556F7400E42C4A /* Main */,
+				31C1F3B82A556F8000E42C4A /* FriendsData */,
+				31C1F3B92A556F8F00E42C4A /* Core */,
+				31C1F3BA2A556F9500E42C4A /* Extensions */,
+				31C1F3BB2A556F9C00E42C4A /* Custom_UIElements */,
+				31C1F3BC2A556FA900E42C4A /* Application */,
+				31C1F3BD2A556FC200E42C4A /* Resources */,
+			);
+			path = WhatsDog_app;
+			sourceTree = "<group>";
+		};
+		31C1F3B62A556F6A00E42C4A /* QuestionProcess */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QuestionProcess;
+			sourceTree = "<group>";
+		};
+		31C1F3B72A556F7400E42C4A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				31C1F30E2A548D8D00E42C4A /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		31C1F3B82A556F8000E42C4A /* FriendsData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FriendsData;
+			sourceTree = "<group>";
+		};
+		31C1F3B92A556F8F00E42C4A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		31C1F3BA2A556F9500E42C4A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31C1F3BB2A556F9C00E42C4A /* Custom_UIElements */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom_UIElements;
+			sourceTree = "<group>";
+		};
+		31C1F3BC2A556FA900E42C4A /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */,
 				31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */,
-				31C1F30E2A548D8D00E42C4A /* ViewController.swift */,
-				31C1F3102A548D8D00E42C4A /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		31C1F3BD2A556FC200E42C4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				31C1F3132A548D8E00E42C4A /* Assets.xcassets */,
 				31C1F3152A548D8E00E42C4A /* LaunchScreen.storyboard */,
 				31C1F3182A548D8E00E42C4A /* Info.plist */,
 			);
-			path = WhatsDog_app;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +188,6 @@
 			files = (
 				31C1F3172A548D8E00E42C4A /* LaunchScreen.storyboard in Resources */,
 				31C1F3142A548D8E00E42C4A /* Assets.xcassets in Resources */,
-				31C1F3122A548D8D00E42C4A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +207,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		31C1F3102A548D8D00E42C4A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				31C1F3112A548D8D00E42C4A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		31C1F3152A548D8E00E42C4A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +341,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4664P6ML3F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WhatsDog_app/Info.plist;
+				INFOPLIST_FILE = WhatsDog_app/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +368,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4664P6ML3F;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WhatsDog_app/Info.plist;
+				INFOPLIST_FILE = WhatsDog_app/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
