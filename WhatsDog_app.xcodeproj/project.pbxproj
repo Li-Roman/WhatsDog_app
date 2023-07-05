@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3137C4102A55721C00746318 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C40F2A55721C00746318 /* CustomUIView.swift */; };
+		3137C4122A55724D00746318 /* CustomGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4112A55724D00746318 /* CustomGradientView.swift */; };
+		3137C4142A55727600746318 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4132A55727600746318 /* CustomLabel.swift */; };
+		3137C4162A55729D00746318 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4152A55729D00746318 /* CustomButton.swift */; };
+		3137C4182A5572BE00746318 /* CustomColorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4172A5572BE00746318 /* CustomColorButton.swift */; };
 		31C1F30B2A548D8D00E42C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */; };
 		31C1F30D2A548D8D00E42C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */; };
 		31C1F30F2A548D8D00E42C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30E2A548D8D00E42C4A /* ViewController.swift */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3137C40F2A55721C00746318 /* CustomUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
+		3137C4112A55724D00746318 /* CustomGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGradientView.swift; sourceTree = "<group>"; };
+		3137C4132A55727600746318 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		3137C4152A55729D00746318 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		3137C4172A5572BE00746318 /* CustomColorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColorButton.swift; sourceTree = "<group>"; };
 		31C1F3072A548D8D00E42C4A /* WhatsDog_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsDog_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3137C40C2A5571E200746318 /* CustomUIView */ = {
+			isa = PBXGroup;
+			children = (
+				3137C40F2A55721C00746318 /* CustomUIView.swift */,
+				3137C4112A55724D00746318 /* CustomGradientView.swift */,
+			);
+			path = CustomUIView;
+			sourceTree = "<group>";
+		};
+		3137C40D2A5571ED00746318 /* CustomLabels */ = {
+			isa = PBXGroup;
+			children = (
+				3137C4132A55727600746318 /* CustomLabel.swift */,
+			);
+			path = CustomLabels;
+			sourceTree = "<group>";
+		};
+		3137C40E2A5571F600746318 /* CustomButtons */ = {
+			isa = PBXGroup;
+			children = (
+				3137C4152A55729D00746318 /* CustomButton.swift */,
+				3137C4172A5572BE00746318 /* CustomColorButton.swift */,
+			);
+			path = CustomButtons;
+			sourceTree = "<group>";
+		};
 		31C1F2FE2A548D8D00E42C4A = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +141,9 @@
 		31C1F3BB2A556F9C00E42C4A /* Custom_UIElements */ = {
 			isa = PBXGroup;
 			children = (
+				3137C40C2A5571E200746318 /* CustomUIView */,
+				3137C40D2A5571ED00746318 /* CustomLabels */,
+				3137C40E2A5571F600746318 /* CustomButtons */,
 			);
 			path = Custom_UIElements;
 			sourceTree = "<group>";
@@ -198,9 +237,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3137C4182A5572BE00746318 /* CustomColorButton.swift in Sources */,
 				31C1F30F2A548D8D00E42C4A /* ViewController.swift in Sources */,
+				3137C4142A55727600746318 /* CustomLabel.swift in Sources */,
+				3137C4102A55721C00746318 /* CustomUIView.swift in Sources */,
 				31C1F30B2A548D8D00E42C4A /* AppDelegate.swift in Sources */,
+				3137C4162A55729D00746318 /* CustomButton.swift in Sources */,
 				31C1F30D2A548D8D00E42C4A /* SceneDelegate.swift in Sources */,
+				3137C4122A55724D00746318 /* CustomGradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
