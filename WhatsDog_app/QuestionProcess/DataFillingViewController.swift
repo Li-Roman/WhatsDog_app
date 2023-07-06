@@ -51,6 +51,7 @@ class DataFillingViewController: UIViewController {
         hairColorQuestionView.viewToController = self
         
         setupViews()
+        
     }
 
     deinit {
@@ -66,6 +67,8 @@ extension DataFillingViewController {
         setupQuestuionView()
         setupButtonStack()
         setupProgressView()
+        setupBackBarButton()
+        
     }
     
     private func setupMainBackground() {
@@ -150,6 +153,26 @@ extension DataFillingViewController {
         }
         questionsViewsArr[0].isHidden = false
     }
+    
+    private func setupBackBarButton() {
+
+        navigationItem.backAction = UIAction(handler: { _ in
+            
+            let alertController = UIAlertController(title: "Wait!", message: "You can lose you data", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "ok", style: .default) { action in
+                self.navigationController?.popViewController(animated: true)
+            }
+            let cancelAction = UIAlertAction(title: "cancel", style: .cancel)
+            
+            alertController.addAction(cancelAction)
+            alertController.addAction(okAction)
+            
+            self.present(alertController, animated: true)
+            
+        })
+        
+    }
 }
 
 // MARK: - ButtonActions
@@ -195,7 +218,6 @@ extension DataFillingViewController {
             }
         }
     }
-    
 }
 
 
@@ -205,5 +227,3 @@ extension DataFillingViewController: UIPopoverPresentationControllerDelegate {
         return .none
     }
 }
-
-
