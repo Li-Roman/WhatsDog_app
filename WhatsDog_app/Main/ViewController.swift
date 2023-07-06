@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupViews()
+        
     }
     
     deinit {
@@ -85,6 +86,11 @@ extension ViewController {
             mainBackgroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+    private func setupNavBar(_ controller: UINavigationController) {
+        controller.navigationBar.tintColor = .systemRed
+    }
+
 }
 
 // MARK: - Button Actions
@@ -103,7 +109,10 @@ extension ViewController {
     private func startButtonAction(sender: CustomButton) {
         let vc = DataFillingViewController()
         
-        navigationController?.pushViewController(vc, animated: true)
+        if let navigationController = navigationController {
+            navigationController.pushViewController(vc, animated: true)
+            setupNavBar(navigationController)
+        }
     }
 }
 
