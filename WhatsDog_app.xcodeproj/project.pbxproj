@@ -136,6 +136,14 @@
 			path = QuestionsViewControllers;
 			sourceTree = "<group>";
 		};
+		3137C4402A5746D500746318 /* FrindsData */ = {
+			isa = PBXGroup;
+			children = (
+				3137C42B2A55856F00746318 /* Names.swift */,
+			);
+			path = FrindsData;
+			sourceTree = "<group>";
+		};
 		31C1F2FE2A548D8D00E42C4A = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +165,7 @@
 			children = (
 				31C1F3B62A556F6A00E42C4A /* QuestionProcess */,
 				31C1F3B72A556F7400E42C4A /* Main */,
-				31C1F3B82A556F8000E42C4A /* FriendsData */,
+				31C1F3B82A556F8000E42C4A /* FriendsSection */,
 				31C1F3B92A556F8F00E42C4A /* Core */,
 				31C1F3BA2A556F9500E42C4A /* Extensions */,
 				31C1F3BB2A556F9C00E42C4A /* Custom_UIElements */,
@@ -185,7 +193,7 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		31C1F3B82A556F8000E42C4A /* FriendsData */ = {
+		31C1F3B82A556F8000E42C4A /* FriendsSection */ = {
 			isa = PBXGroup;
 			children = (
 				3137C4212A5584A700746318 /* FriendsViewController.swift */,
@@ -193,9 +201,9 @@
 				3137C4252A55850D00746318 /* DogInfoViewController.swift */,
 				3137C4272A55852D00746318 /* Source.swift */,
 				3137C4292A55855100746318 /* FriendsCell.swift */,
-				3137C42B2A55856F00746318 /* Names.swift */,
+				3137C4402A5746D500746318 /* FrindsData */,
 			);
-			path = FriendsData;
+			path = FriendsSection;
 			sourceTree = "<group>";
 		};
 		31C1F3B92A556F8F00E42C4A /* Core */ = {

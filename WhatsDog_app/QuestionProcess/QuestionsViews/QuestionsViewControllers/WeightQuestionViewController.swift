@@ -116,7 +116,7 @@ extension WeightQuestionViewController {
         let label = self.viewFrom?.getWeightButtonTitle()
         dismiss(animated: true) {
             if let user = self.viewFrom?.viewToController?.user {
-                self.viewFrom?.updateWeightButton(text: "\(self.resultWeight)", titleColor: .gray, font: .boldSystemFont(ofSize: 20))
+                self.viewFrom?.updateWeightButton(text: "\(self.resultWeight) кг", titleColor: .gray, font: .boldSystemFont(ofSize: 20))
                 user.setupWeight(weight: self.resultWeight)
                 
                 if label == "Не определен..." {

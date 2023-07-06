@@ -20,9 +20,9 @@ class AHWQuestionView: CustomUIView {
     private var heightLabel  = UILabel()
     private var weightLabel  = UILabel()
     
-    private var ageButton           = UIButton()
-    private var heightButton        = UIButton()
-    private var weightButton        = UIButton()
+    private var ageButton    = UIButton()
+    private var heightButton = UIButton()
+    private var weightButton = UIButton()
     
     
     override init(frame: CGRect) {
@@ -96,7 +96,7 @@ extension AHWQuestionView {
     
     private func setupViews() {
         setupWelcomeLabel()
-        makeLabelsConstraints()
+        setupQuestionLabels()
         setupQuestionButtons()
     }
     

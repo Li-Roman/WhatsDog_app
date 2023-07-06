@@ -100,6 +100,26 @@ extension AgeQuestionViewController {
     }
 }
 
+// MARK: - Private Methods
+extension AgeQuestionViewController {
+    
+    private func switchAge(_ age: Int) -> String {
+        
+        guard age < 10 || age > 20 else { return "лет" }
+        
+        let lastNumber = age % 10
+        
+        switch lastNumber {
+        case 1:
+            return "год"
+        case 2...4:
+            return "года"
+        default:
+            return "лет"
+        }
+    }
+}
+
 // MARK: - Button Actions
 extension AgeQuestionViewController {
     
@@ -116,7 +136,7 @@ extension AgeQuestionViewController {
             print("nil")
         }
         
-        viewFrom?.updateAgeButton(text: " \(years) лет", titleColor: .gray, font: .boldSystemFont(ofSize: 20))
+        viewFrom?.updateAgeButton(text: " \(years) \(switchAge(years))", titleColor: .gray, font: .boldSystemFont(ofSize: 20))
         
         dismiss(animated: true)
     }
