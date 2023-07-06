@@ -29,11 +29,15 @@ class DataFillingViewController: UIViewController {
         }
     }
 
-    
     private(set) var questionsView  = CustomUIView()
     private let buttonsStackView    = UIStackView()
     private(set) var backButton     = CustomButton()
     private(set) var nextButton     = CustomButton()
+    private var isVisibleNameMaleQuestion = true {
+        didSet {
+            toggleBackButton(isVisibleNameMaleQuestion)
+        }
+    }
     
     var nameQuestionView            = NameMaleQuestionView()
     var awhQuestionView             = AHWQuestionView()
@@ -82,6 +86,7 @@ extension DataFillingViewController {
         ])
         mainBackgroundImage.image = UIImage(named: "mainBackgroundImage")
         mainBackgroundImage.contentMode = .scaleAspectFill
+        mainBackgroundImage.clipsToBounds = true
     }
     
     private func setupQuestuionView() {
@@ -114,11 +119,21 @@ extension DataFillingViewController {
         buttonsStackView.addArrangedSubview(backButton)
         buttonsStackView.addArrangedSubview(nextButton)
         buttonsStackView.spacing = 20
-        backButton.setTitle("BACK", for: .normal)
-        nextButton.setTitle("NEXT", for: .normal)
         buttonsStackView.alignment = .center
         buttonsStackView.distribution = .fillEqually
+        setupBackButton()
+        setupNextButton()
+    }
+    
+    private func setupBackButton() {
+        backButton.setTitle("BACK", for: .normal)
+        backButton.isEnabled = true
+        backButton.backgroundColor = .gray
         backButton.addTarget(self, action: #selector(backButtonAction(sender:)), for: .touchUpInside)
+    }
+    
+    private func setupNextButton() {
+        nextButton.setTitle("NEXT", for: .normal)
         nextButton.addTarget(self, action: #selector(nextButtonAction(sender:)), for: .touchUpInside)
     }
     
@@ -154,41 +169,65 @@ extension DataFillingViewController {
         questionsViewsArr[0].isHidden = false
     }
     
+    
     private func setupBackBarButton() {
 
-        navigationItem.backAction = UIAction(handler: { _ in
-            
-            let alertController = UIAlertController(title: "Wait!", message: "You can lose you data", preferredStyle: .alert)
-            
-            let okAction = UIAlertAction(title: "ok", style: .default) { action in
-                self.navigationController?.popViewController(animated: true)
-            }
-            let cancelAction = UIAlertAction(title: "cancel", style: .cancel)
-            
-            alertController.addAction(cancelAction)
-            alertController.addAction(okAction)
-            
-            self.present(alertController, animated: true)
-            
-        })
-        
+        let buttonImage = UIImage(systemName: "arrowshape.backward.fill")!
+        let button = UIBarButtonItem(image: buttonImage, style: .plain, target: self, action: #selector(backBarButtonAction(sender:)))
+        navigationItem.leftBarButtonItem = button
     }
+}
+
+// MARK: - Private Methods
+extension DataFillingViewController {
+    
+    private func toggleBackButton(_ condition: Bool) {
+        switch condition {
+        case true:
+            backButton.backgroundColor = .gray
+            backButton.isEnabled = false
+        case false:
+            backButton.backgroundColor = .systemRed
+            backButton.isEnabled = true
+        }
+    }
+    
+    private func whichIsHidden() -> Int {
+        var index = 0
+        for view in 0..<questionsViewsArr.count {
+            if !questionsViewsArr[view].isHidden {
+                index = view
+            }
+        }
+        return index
+    }
+    
 }
 
 // MARK: - ButtonActions
 extension DataFillingViewController {
     
     @objc
-    private func backButtonAction(sender: CustomButton) {
-        var index = 0
-        for view in 0..<questionsViewsArr.count {
-            if questionsViewsArr[view].isHidden == false {
-                index = view
-            }
-        }
+    private func backBarButtonAction(sender: UIBarButtonItem) {
         
+        let alertController = UIAlertController(title: "Wait!", message: "You can lose you data", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "ok", style: .default) { action in
+            self.navigationController?.popViewController(animated: true)
+        }
+        let cancelAction = UIAlertAction(title: "cancel", style: .cancel)
+        
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        present(alertController, animated: true)
+    }
+    
+    
+    @objc
+    private func backButtonAction(sender: CustomButton) {
+        let index = whichIsHidden()
+        isVisibleNameMaleQuestion = index == 2 ? false : true
         switch index {
-        case 0: print("break"); break
+        case 0: break
         default:
             questionsViewsArr[index].isHidden = true
             questionsViewsArr[index - 1].isHidden = false
@@ -203,15 +242,11 @@ extension DataFillingViewController {
             navigationController?.pushViewController(vc, animated: true)
             
         } else {
-            var index = 0
-            for view in 0..<questionsViewsArr.count {
-                if questionsViewsArr[view].isHidden == false {
-                    index = view
-                }
-            }
             
+            let index = whichIsHidden()
+            isVisibleNameMaleQuestion = false
             switch index {
-            case questionsViewsArr.count - 1: print("break"); break
+            case questionsViewsArr.count - 1: break
             default:
                 questionsViewsArr[index].isHidden = true
                 questionsViewsArr[index + 1].isHidden = false

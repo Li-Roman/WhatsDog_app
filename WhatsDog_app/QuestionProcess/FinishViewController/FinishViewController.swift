@@ -61,6 +61,7 @@ extension FinishViewController {
         
         backgroundImage.image = UIImage(named: "mainBackgroundImage")
         backgroundImage.contentMode = .scaleAspectFill
+        backgroundImage.clipsToBounds = true
     }
     
     private func backgroundImageConstraints() {
@@ -153,6 +154,8 @@ extension FinishViewController {
                         self.welcomeLabel.text = "ТЫ \(dog.name.uppercased())!"
                         self.resultBreed = dog.name
                         self.resultImage = dog.image
+                        self.finishButton.isEnabled = true
+                        self.finishButton.backgroundColor = .systemGreen
                     }
                 }
             }
@@ -225,6 +228,8 @@ extension FinishViewController {
             self.updateWithAnimation {
                 self.welcomeLabel.alpha = 0
                 // self.progressView.alpha = 0
+                self.finishButton.isEnabled = false
+                self.finishButton.backgroundColor = .gray
             } completion: {
                 self.welcomeLabel.alpha = 1
                 self.welcomeLabel.text = "РРРРРРРРРРРРРРР"
