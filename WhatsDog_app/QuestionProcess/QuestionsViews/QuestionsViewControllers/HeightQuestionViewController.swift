@@ -117,7 +117,7 @@ extension HeightQuestionViewController {
         dismiss(animated: true) {
             if let user = self.viewFrom?.viewToController?.user {
                 
-                self.viewFrom?.updateHeightButton(text: "\(self.resultHeight)", titleColor: .gray, font: .boldSystemFont(ofSize: 20))
+                self.viewFrom?.updateHeightButton(text: "\(self.resultHeight) см", titleColor: .gray, font: .boldSystemFont(ofSize: 20))
                 user.setupHeight(height: self.resultHeight)
                 
                 if label == "Не определен..." {

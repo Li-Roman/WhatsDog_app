@@ -58,25 +58,27 @@ extension ProfileDetailViewController {
         }
         
         NSLayoutConstraint.activate([
-            backView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -100),
-            backView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            backView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -16),
-            backView.heightAnchor.constraint(equalToConstant: 160),
             
             avatarIcon.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             avatarIcon.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             avatarIcon.heightAnchor.constraint(equalToConstant: 100),
             avatarIcon.widthAnchor.constraint(equalToConstant: 100),
             
-            nameLabel.leadingAnchor.constraint(equalTo: avatarIcon.trailingAnchor, constant: 24),
-            nameLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            nameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            nameLabel.heightAnchor.constraint(equalToConstant: 40),
+            backView.leadingAnchor.constraint(equalTo: avatarIcon.leadingAnchor),
+            backView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            backView.heightAnchor.constraint(equalTo: avatarIcon.heightAnchor),
+            backView.topAnchor.constraint(equalTo: avatarIcon.topAnchor),
             
-            resultLabel.leadingAnchor.constraint(equalTo: avatarIcon.trailingAnchor, constant: 24),
-            resultLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            resultLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 16),
-            resultLabel.heightAnchor.constraint(equalToConstant: 25),
+            nameLabel.leadingAnchor.constraint(equalTo: avatarIcon.trailingAnchor, constant: 16),
+            nameLabel.trailingAnchor.constraint(equalTo: backView.trailingAnchor, constant: 16),
+            nameLabel.topAnchor.constraint(equalTo: backView.topAnchor, constant: 8),
+            nameLabel.heightAnchor.constraint(equalToConstant: 30),
+            
+            resultLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
+            resultLabel.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor),
+            resultLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 20),
+            resultLabel.heightAnchor.constraint(equalToConstant: 20),
+            
             
             resultIcon.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             resultIcon.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
@@ -102,7 +104,7 @@ extension ProfileDetailViewController {
     
     private func setupBackView() {
         backView.backgroundColor = .systemGray6
-        backView.layer.cornerRadius = 75
+        backView.layer.cornerRadius = 50
     }
     
     private func setupAvatarIcon() {
@@ -111,19 +113,21 @@ extension ProfileDetailViewController {
         avatarIcon.contentMode = .scaleAspectFill
     }
     
+    private func setupNameLabel() {
+        nameLabel.font = .boldSystemFont(ofSize: 22)
+        nameLabel.sizeToFit()
+        nameLabel.textColor = .darkText
+        nameLabel.textAlignment = .left
+        nameLabel.numberOfLines = 0
+    }
+    
     private func setupResultLabel() {
-        resultLabel.font = .italicSystemFont(ofSize: 20)
+        resultLabel.font = .italicSystemFont(ofSize: 18)
         resultLabel.textColor = .gray
         resultLabel.textAlignment = .left
         resultLabel.numberOfLines = 0
     }
     
-    private func setupNameLabel() {
-        nameLabel.font = .boldSystemFont(ofSize: 25)
-        nameLabel.textColor = .darkText
-        nameLabel.textAlignment = .left
-        nameLabel.numberOfLines = 0
-    }
     
     private func setupInfoButton() {
         infoButton.configuration = .gray()

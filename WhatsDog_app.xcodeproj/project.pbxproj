@@ -30,6 +30,7 @@
 		3137C43B2A5588D100746318 /* HeightQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C43A2A5588D100746318 /* HeightQuestionViewController.swift */; };
 		3137C43D2A5588EE00746318 /* WeightQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C43C2A5588EE00746318 /* WeightQuestionViewController.swift */; };
 		3137C43F2A55890600746318 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C43E2A55890600746318 /* FinishViewController.swift */; };
+		3137C4422A576BCE00746318 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3137C4412A576BCE00746318 /* Storyboard.storyboard */; };
 		31C1F30B2A548D8D00E42C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */; };
 		31C1F30D2A548D8D00E42C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */; };
 		31C1F30F2A548D8D00E42C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30E2A548D8D00E42C4A /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		3137C43A2A5588D100746318 /* HeightQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightQuestionViewController.swift; sourceTree = "<group>"; };
 		3137C43C2A5588EE00746318 /* WeightQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightQuestionViewController.swift; sourceTree = "<group>"; };
 		3137C43E2A55890600746318 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
+		3137C4412A576BCE00746318 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		31C1F3072A548D8D00E42C4A /* WhatsDog_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsDog_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 			path = QuestionsViewControllers;
 			sourceTree = "<group>";
 		};
+		3137C4402A5746D500746318 /* FrindsData */ = {
+			isa = PBXGroup;
+			children = (
+				3137C42B2A55856F00746318 /* Names.swift */,
+			);
+			path = FrindsData;
+			sourceTree = "<group>";
+		};
 		31C1F2FE2A548D8D00E42C4A = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +167,7 @@
 			children = (
 				31C1F3B62A556F6A00E42C4A /* QuestionProcess */,
 				31C1F3B72A556F7400E42C4A /* Main */,
-				31C1F3B82A556F8000E42C4A /* FriendsData */,
+				31C1F3B82A556F8000E42C4A /* FriendsSection */,
 				31C1F3B92A556F8F00E42C4A /* Core */,
 				31C1F3BA2A556F9500E42C4A /* Extensions */,
 				31C1F3BB2A556F9C00E42C4A /* Custom_UIElements */,
@@ -181,11 +191,12 @@
 			isa = PBXGroup;
 			children = (
 				31C1F30E2A548D8D00E42C4A /* ViewController.swift */,
+				3137C4412A576BCE00746318 /* Storyboard.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		31C1F3B82A556F8000E42C4A /* FriendsData */ = {
+		31C1F3B82A556F8000E42C4A /* FriendsSection */ = {
 			isa = PBXGroup;
 			children = (
 				3137C4212A5584A700746318 /* FriendsViewController.swift */,
@@ -193,9 +204,9 @@
 				3137C4252A55850D00746318 /* DogInfoViewController.swift */,
 				3137C4272A55852D00746318 /* Source.swift */,
 				3137C4292A55855100746318 /* FriendsCell.swift */,
-				3137C42B2A55856F00746318 /* Names.swift */,
+				3137C4402A5746D500746318 /* FrindsData */,
 			);
-			path = FriendsData;
+			path = FriendsSection;
 			sourceTree = "<group>";
 		};
 		31C1F3B92A556F8F00E42C4A /* Core */ = {
@@ -305,6 +316,7 @@
 			files = (
 				31C1F3172A548D8E00E42C4A /* LaunchScreen.storyboard in Resources */,
 				31C1F3142A548D8E00E42C4A /* Assets.xcassets in Resources */,
+				3137C4422A576BCE00746318 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
