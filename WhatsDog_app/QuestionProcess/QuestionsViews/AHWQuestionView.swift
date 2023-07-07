@@ -151,11 +151,13 @@ extension AHWQuestionView {
     private func setupLabels() {
         
         [ageLabel, heightLabel, weightLabel].forEach {
-            $0.text = "Ваш возраст"
             $0.textColor = .systemRed
             $0.textAlignment = .left
             $0.font = UIFont(name: "Helvetica", size: 20)
         }
+        ageLabel.text = "Ваш возраст"
+        heightLabel.text = "Ваш рост"
+        weightLabel.text = "Ваш вес"
 
     }
     
