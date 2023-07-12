@@ -31,6 +31,11 @@
 		3137C43D2A5588EE00746318 /* WeightQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C43C2A5588EE00746318 /* WeightQuestionViewController.swift */; };
 		3137C43F2A55890600746318 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C43E2A55890600746318 /* FinishViewController.swift */; };
 		3137C4422A576BCE00746318 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3137C4412A576BCE00746318 /* Storyboard.storyboard */; };
+		3137C4692A58C4F500746318 /* PhotoQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4682A58C4F500746318 /* PhotoQuestionView.swift */; };
+		3137C46B2A59DEC500746318 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C46A2A59DEC500746318 /* ImagePicker.swift */; };
+		3137C4712A5C967E00746318 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3137C4702A5C967E00746318 /* SnapKit */; };
+		3137C4742A5DB2B300746318 /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 3137C4732A5DB2B300746318 /* CropViewController */; };
+		3137C4762A5DCD3B00746318 /* Cropping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3137C4752A5DCD3B00746318 /* Cropping.swift */; };
 		31C1F30B2A548D8D00E42C4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */; };
 		31C1F30D2A548D8D00E42C4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */; };
 		31C1F30F2A548D8D00E42C4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1F30E2A548D8D00E42C4A /* ViewController.swift */; };
@@ -63,6 +68,9 @@
 		3137C43C2A5588EE00746318 /* WeightQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightQuestionViewController.swift; sourceTree = "<group>"; };
 		3137C43E2A55890600746318 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		3137C4412A576BCE00746318 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		3137C4682A58C4F500746318 /* PhotoQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoQuestionView.swift; sourceTree = "<group>"; };
+		3137C46A2A59DEC500746318 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		3137C4752A5DCD3B00746318 /* Cropping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cropping.swift; sourceTree = "<group>"; };
 		31C1F3072A548D8D00E42C4A /* WhatsDog_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsDog_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C1F30A2A548D8D00E42C4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31C1F30C2A548D8D00E42C4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3137C4712A5C967E00746318 /* SnapKit in Frameworks */,
+				3137C4742A5DB2B300746318 /* CropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +122,7 @@
 		3137C42D2A5587C600746318 /* QuestionsViews */ = {
 			isa = PBXGroup;
 			children = (
+				3137C4682A58C4F500746318 /* PhotoQuestionView.swift */,
 				3137C4322A55882F00746318 /* NameMaleQuestionView.swift */,
 				3137C4342A55888200746318 /* AHWQuestionView.swift */,
 				3137C4362A5588A000746318 /* HairColorQuestionView.swift */,
@@ -131,6 +142,7 @@
 		3137C4312A55881000746318 /* QuestionsViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3137C46C2A59EF5700746318 /* PhotoProcess */,
 				3137C4382A5588BB00746318 /* AgeQuestionViewController.swift */,
 				3137C43A2A5588D100746318 /* HeightQuestionViewController.swift */,
 				3137C43C2A5588EE00746318 /* WeightQuestionViewController.swift */,
@@ -144,6 +156,15 @@
 				3137C42B2A55856F00746318 /* Names.swift */,
 			);
 			path = FrindsData;
+			sourceTree = "<group>";
+		};
+		3137C46C2A59EF5700746318 /* PhotoProcess */ = {
+			isa = PBXGroup;
+			children = (
+				3137C46A2A59DEC500746318 /* ImagePicker.swift */,
+				3137C4752A5DCD3B00746318 /* Cropping.swift */,
+			);
+			path = PhotoProcess;
 			sourceTree = "<group>";
 		};
 		31C1F2FE2A548D8D00E42C4A = {
@@ -272,6 +293,10 @@
 			dependencies = (
 			);
 			name = WhatsDog_app;
+			packageProductDependencies = (
+				3137C4702A5C967E00746318 /* SnapKit */,
+				3137C4732A5DB2B300746318 /* CropViewController */,
+			);
 			productName = WhatsDog_app;
 			productReference = 31C1F3072A548D8D00E42C4A /* WhatsDog_app.app */;
 			productType = "com.apple.product-type.application";
@@ -300,6 +325,10 @@
 				Base,
 			);
 			mainGroup = 31C1F2FE2A548D8D00E42C4A;
+			packageReferences = (
+				3137C46F2A5C967E00746318 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3137C4722A5DB2B300746318 /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+			);
 			productRefGroup = 31C1F3082A548D8D00E42C4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -339,13 +368,16 @@
 				3137C4202A55840100746318 /* Solution.swift in Sources */,
 				3137C4142A55727600746318 /* CustomLabel.swift in Sources */,
 				3137C4242A5584DF00746318 /* ProfileDetailViewController.swift in Sources */,
+				3137C46B2A59DEC500746318 /* ImagePicker.swift in Sources */,
 				3137C4332A55882F00746318 /* NameMaleQuestionView.swift in Sources */,
 				3137C4102A55721C00746318 /* CustomUIView.swift in Sources */,
 				3137C4282A55852D00746318 /* Source.swift in Sources */,
 				31C1F30B2A548D8D00E42C4A /* AppDelegate.swift in Sources */,
+				3137C4762A5DCD3B00746318 /* Cropping.swift in Sources */,
 				3137C41E2A5583E500746318 /* Dog.swift in Sources */,
 				3137C41A2A55833400746318 /* UIColorExtexnsion.swift in Sources */,
 				3137C42C2A55856F00746318 /* Names.swift in Sources */,
+				3137C4692A58C4F500746318 /* PhotoQuestionView.swift in Sources */,
 				3137C43D2A5588EE00746318 /* WeightQuestionViewController.swift in Sources */,
 				3137C4162A55729D00746318 /* CustomButton.swift in Sources */,
 				31C1F30D2A548D8D00E42C4A /* SceneDelegate.swift in Sources */,
@@ -568,6 +600,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3137C46F2A5C967E00746318 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		3137C4722A5DB2B300746318 /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3137C4702A5C967E00746318 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3137C46F2A5C967E00746318 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		3137C4732A5DB2B300746318 /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3137C4722A5DB2B300746318 /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 31C1F2FF2A548D8D00E42C4A /* Project object */;
 }
