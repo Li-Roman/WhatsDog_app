@@ -31,6 +31,7 @@ enum Male {
 
 class User {
     
+    private(set) var avatar = UIImage(systemName: "person")!
     private(set) var male: Male?
     private(set) var name: String?
     private(set) var age: Int?
@@ -45,6 +46,14 @@ class User {
         } else {
             return nil
         }
+    }
+    
+    func setupDefaultAvatar() {
+        avatar = UIImage(systemName: "person")!
+    }
+    
+    func setupAvatar(_ avatarImage: UIImage) {
+        self.avatar = avatarImage
     }
     
     func setupMale(male: Male) {

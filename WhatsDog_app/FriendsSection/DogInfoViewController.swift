@@ -14,7 +14,6 @@ class DogInfoViewController: UIViewController {
     private let webView = WKWebView()
     private var dogsInfoURL: URL?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

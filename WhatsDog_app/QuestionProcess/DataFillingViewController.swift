@@ -33,12 +33,13 @@ class DataFillingViewController: UIViewController {
     private let buttonsStackView    = UIStackView()
     private(set) var backButton     = CustomButton()
     private(set) var nextButton     = CustomButton()
-    private var isVisibleNameMaleQuestion = true {
+    private var isVisiblePhotoQuestion = true {
         didSet {
-            toggleBackButton(isVisibleNameMaleQuestion)
+            toggleBackButton(isVisiblePhotoQuestion)
         }
     }
     
+    var photoQuestionView           = PhotoQuestionView()
     var nameQuestionView            = NameMaleQuestionView()
     var awhQuestionView             = AHWQuestionView()
     var hairColorQuestionView       = HairColorQuestionView()
@@ -49,10 +50,11 @@ class DataFillingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        finishViewController.stepFrom = self
-        nameQuestionView.viewToController = self
-        awhQuestionView.viewToController = self
-        hairColorQuestionView.viewToController = self
+        photoQuestionView.viewToController      = self
+        finishViewController.stepFrom           = self
+        nameQuestionView.viewToController       = self
+        awhQuestionView.viewToController        = self
+        hairColorQuestionView.viewToController  = self
         
         setupViews()
         
@@ -72,7 +74,6 @@ extension DataFillingViewController {
         setupButtonStack()
         setupProgressView()
         setupBackBarButton()
-        
     }
     
     private func setupMainBackground() {
@@ -101,6 +102,7 @@ extension DataFillingViewController {
         ])
         questionsView.backgroundColor = .systemBackground
         questionsView.layer.cornerRadius = 20
+        questionsView.clipsToBounds = true
         
         addSubViews()
     }
@@ -154,7 +156,7 @@ extension DataFillingViewController {
     
     private func addSubViews() {
         
-        questionsViewsArr = [nameQuestionView, awhQuestionView, hairColorQuestionView]
+        questionsViewsArr = [photoQuestionView ,nameQuestionView, awhQuestionView, hairColorQuestionView]
         for view in questionsViewsArr {
             questionsView.addSubview(view)
             view.translatesAutoresizingMaskIntoConstraints = false
@@ -225,7 +227,7 @@ extension DataFillingViewController {
     @objc
     private func backButtonAction(sender: CustomButton) {
         let index = whichIsHidden()
-        isVisibleNameMaleQuestion = index == 2 ? false : true
+        isVisiblePhotoQuestion = index <= 1 ? true : false
         switch index {
         case 0: break
         default:
@@ -244,7 +246,7 @@ extension DataFillingViewController {
         } else {
             
             let index = whichIsHidden()
-            isVisibleNameMaleQuestion = false
+            isVisiblePhotoQuestion = false
             switch index {
             case questionsViewsArr.count - 1: break
             default:
@@ -254,11 +256,13 @@ extension DataFillingViewController {
         }
     }
 }
-
-
+ 
+// MARK: - UIPopoverPresentationControllerDelegate
 extension DataFillingViewController: UIPopoverPresentationControllerDelegate {
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
 }
+
+

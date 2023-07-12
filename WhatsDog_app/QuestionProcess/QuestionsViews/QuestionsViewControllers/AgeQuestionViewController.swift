@@ -16,6 +16,7 @@ class AgeQuestionViewController: UIViewController {
     private var doneButton   = CustomButton()
 
     private var years        = 0
+    private let timeInterval = -100*365*24*60*60
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +68,7 @@ extension AgeQuestionViewController {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.datePickerMode = .date
         datePicker.locale = .current
-        datePicker.minimumDate = Date(timeIntervalSinceNow: -100*365*24*60*60)
+        datePicker.minimumDate = Date(timeIntervalSinceNow: Double(timeInterval))
         datePicker.maximumDate = .now
         datePicker.addTarget(self, action: #selector(datePickerAction(sender:)), for: .valueChanged)
     }

@@ -207,7 +207,7 @@ extension FinishViewController {
         default: gender = .female
         }
         
-        let friend = Friend(name: user.name!, gender: gender, avatar: UIImage(systemName: "person")!, resultBreed: resultBreed, resultImage: resultImage)
+        let friend = Friend(name: user.name!, gender: gender, avatar: user.avatar, resultBreed: resultBreed, resultImage: resultImage)
         Friends.insert(friend, at: 0)
         navigationController?.popToRootViewController(animated: true)
     }
